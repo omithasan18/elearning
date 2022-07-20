@@ -36,7 +36,7 @@
             <div class="container mx-auto !max-w-[80%]">
                 <div class="flex justify-between items-center">
                     <div>
-                        <a href="index.html"><img src="{{asset('frontEnd/dist/img/')}}/logo_white.png" alt="" class="navbar__logo max-h-[40px]"></a>
+                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/dist/img/')}}/logo.png" alt="" class="navbar__logo max-h-[40px]"></a>
                     </div>
 
                     <div class="flex space-x-2">

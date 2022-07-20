@@ -37,7 +37,7 @@
             <div class="container mx-auto">
                 <div class="flex justify-between items-center">
                     <div>
-                        <a href="index.html"><img src="{{asset('frontEnd/dist/img/')}}/logo.png" alt="" class="navbar__logo max-h-[40px]"></a>
+                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/dist/img/')}}/logo.png" alt="" class="navbar__logo max-h-[40px]"></a>
                     </div>
 
                     <ul class="navbar__list ml-10 hidden md:flex">
@@ -53,10 +53,9 @@
                                 class="far fa-bars"></i></button>
                         @auth
                             <a href="#" class="button button--tertiary hidden md:inline-block">My Panel</a>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                            this.closest('form').submit();" class="button button--primary hidden md:inline-block">Logout</a>
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="button button--primary hidden md:inline-block">Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
                             </form>
                         @else
                         <a href="{{url('login')}}" class="button button--tertiary hidden md:inline-block">Login</a>
