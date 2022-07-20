@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +41,12 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     Route::post('update-profile', [SettingController::class, 'update_profile'])->name('update-profile');
     Route::get('change-password', [SettingController::class, 'change_password'])->name('change-password');
     Route::post('update-password', [SettingController::class, 'update_password'])->name('update-password');
+    // category
     Route::resource('category', CategoryController::class);
     Route::post('valid-category-name-slug', [CategoryController::class, 'checkCategory'])->name('valid_category_name_slug');
-
+    // course
+    Route::resource('course', CourseController::class);
+    Route::post('valid-course-name-slug', [CourseController::class, 'checkCourse'])->name('valid_course_name_slug');
 });
 
 Route::group(['as'=>'dcadmin.','prefix' => 'dcadmin', 'namespace'=>'App\Http\Controllers\DC','middleware'=>['auth','dc']], function () {

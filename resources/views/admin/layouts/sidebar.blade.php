@@ -17,7 +17,7 @@
         </div>
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview">
                     <a href="{{route('dashboard')}}" class="nav-link {{ Route::is('admin.dashboard') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -25,13 +25,33 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview">
                     <a href="{{route('admin.category.index')}}" class="nav-link {{ Route::is('admin.category.index') ? 'active' : '' }}">
                          <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Category
                         </p>
                     </a>
+                </li>
+                <li class="nav-item {{ Request::is('superadmin/course') || Request::is('superadmin/course/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p> Course <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.course.create')}}" class="nav-link {{ Request::is('superadmin/course/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create Course</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.course.index')}}" class="nav-link {{ Request::is('superadmin/course') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Course</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item {{ Request::is('superadmin/profile') || Request::is('superadmin/change-password') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
