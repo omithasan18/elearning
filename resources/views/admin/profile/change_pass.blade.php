@@ -1,7 +1,9 @@
 @extends('admin.layouts.app')
+
 @section('title')
     <title>{{ config('app.name', 'Laravel') }} | Change Password</title>
 @endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

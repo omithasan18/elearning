@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,22 +28,24 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     }
 })->name('dashboard');
 
-Route::group(['as'=>'admin.','prefix' => 'superadmin', 'namespace'=>'App\Http\Controllers\Admin','middleware'=>['auth','admin']], function () {
-		
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','admin']], function () {
+
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     //profile
-    Route::get('profile', 'SettingController@profile')->name('profile');
-    Route::post('update-profile', 'SettingController@update_profile')->name('update-profile');
-    Route::get('change-password', 'SettingController@change_password')->name('change-password');
-    Route::post('update-password', 'SettingController@update_password')->name('update-password');
+    Route::get('profile', [SettingController::class, 'profile'])->name('profile');
+    Route::post('update-profile', [SettingController::class, 'update_profile'])->name('update-profile');
+    Route::get('change-password', [SettingController::class, 'change_password'])->name('change-password');
+    Route::post('update-password', [SettingController::class, 'update_password'])->name('update-password');
+    Route::resource('category', CategoryController::class);
+    Route::post('valid-category-name-slug', [CategoryController::class, 'checkCategory'])->name('valid_category_name_slug');
+
 });
 
 Route::group(['as'=>'dcadmin.','prefix' => 'dcadmin', 'namespace'=>'App\Http\Controllers\DC','middleware'=>['auth','dc']], function () {
-		
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    //profile
-    Route::get('profile', 'SettingController@profile')->name('profile');
-    Route::post('update-profile', 'SettingController@update_profile')->name('update-profile');
+
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('profile', [SettingController::class, 'profile'])->name('profile');
+    Route::post('update-profile', [SettingController::class, 'update_profile'])->name('update-profile');
 
 });
 
