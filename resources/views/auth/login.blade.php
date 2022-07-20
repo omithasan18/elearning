@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="flex space-x-2">
-                        <a href="login.html" class="button button--tertiary">Sign Up</a>
+                        <a href="{{url('register')}}" class="button button--tertiary">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,21 @@
                         <h2 class="text-4xl font-bold mb-6">Log In</h2>
                         <p class="bg-slate-100 text-sm p-2 mb-3">
                             Always check you are on the official site <br>
-                            <span class="text-blue-700">https://</span>trade.swyftx.com.au
                         </p>
+                        @if ($errors->any())
+                            <div class="alert alert-danger" style="color: red">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        @if(session()->has('msg'))
+                            <div class="alert alert-success" style="color: green">
+                                {{ session()->get('msg') }}
+                            </div>
+                        @endif
                         <form class="space-y-3" action="{{ route('login') }}" method="post">
                             @csrf
                             <div class="nice-form">

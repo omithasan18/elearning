@@ -52,14 +52,14 @@
                         <button class="button button--icon open-mobile-menu md:hidden"><i
                                 class="far fa-bars"></i></button>
                         @auth
-                            <a href="#" class="button button--tertiary hidden md:inline-block">My Panel</a>
+                            <a href="{{route('home')}}" class="button button--tertiary hidden md:inline-block">My Panel</a>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="button button--primary hidden md:inline-block">Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}
                             </form>
                         @else
                         <a href="{{url('login')}}" class="button button--tertiary hidden md:inline-block">Login</a>
-                        <a href="login.html" class="button button--primary hidden md:inline-block">Signup</a>
+                        <a href="{{url('register')}}" class="button button--primary hidden md:inline-block">Signup</a>
                         @endauth
                         
                         

@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', 'App\Http\Controllers\WelcomeController@home')->name('home');
+Route::get('/register', 'App\Http\Controllers\WelcomeController@register')->name('register');
+Route::post('/register', 'App\Http\Controllers\WelcomeController@save_register')->name('student-register');
+Route::get('/home', 'App\Http\Controllers\HomeController@home')->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     if (Auth::user()->role_id == 1) {

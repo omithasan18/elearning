@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="flex space-x-2">
-                        <a href="login.html" class="button button--tertiary">Sign Up</a>
+                        <a href="{{url('login')}}" class="button button--tertiary">Login</a>
                     </div>
                 </div>
             </div>
@@ -99,32 +99,43 @@
                 </div>
                 <div class="max-w-[500px] mx-auto order-first md:order-last relative md:static md:order-first p-10 md:p-0 bg-white md:bg-transparent rounded-lg md:rounded-0">
                     <div class="max-w-[300px] mx-auto text-gray-700">
-                        <h2 class="text-4xl font-bold mb-6">Log In</h2>
+                        <h2 class="text-4xl font-bold mb-6">Sign Up</h2>
                         <p class="bg-slate-100 text-sm p-2 mb-3">
                             Always check you are on the official site <br>
-                            <span class="text-blue-700">https://</span>trade.swyftx.com.au
                         </p>
-                        <form class="space-y-3">
+                        @if ($errors->any())
+                                <div class="alert alert-danger" style="color: red">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                        <form class="space-y-3" action="{{route('student-register')}}" method="post">
+                            @csrf
                             <div class="nice-form">
-                                <input type="email" class="nice-form__input" placeholder="Email">
+                                <input type="text" name="name" value="{{old('name')}}" class="nice-form__input" placeholder="Name" required>
+                                <span class="nice-form__prepend">Name</span>
+                            </div>
+                            <div class="nice-form">
+                                <input type="text" name="username" value="{{old('username')}}" class="nice-form__input" placeholder="Username" required>
+                                <span class="nice-form__prepend">User Name</span>
+                            </div>
+                            <div class="nice-form">
+                                <input type="email" name="email" value="{{old('email')}}" class="nice-form__input" placeholder="Email" required>
                                 <span class="nice-form__prepend">Email</span>
                             </div>
                             <div class="nice-form">
-                                <input type="email" class="nice-form__input" placeholder="Passowrd">
+                                <input type="password" name="password" class="nice-form__input" placeholder="Passowrd" required>
                                 <span class="nice-form__prepend">Passowrd</span>
                             </div>
-                            <div class="flex items-center justify-between">
-                                <label class="theme-checkbox">
-                                    <input type="checkbox" class="theme-checkbox__input" >
-                                    <span class="theme-checkbox__checkmark"></span>
-                                    <span class="theme-checkbox__text text-sm whitespace-nowrap">Remember Me</span>
-                                </label>
-                                <div>
-                                    <a href="#" class="text-blue-700 text-sm whitespace-nowrap">Forgot Password?</a>
-                                </div>
+                            <div class="nice-form">
+                                <input type="password" name="password_confirmation" class="nice-form__input" placeholder="Passowrd" required>
+                                <span class="nice-form__prepend">Confirm Passowrd</span>
                             </div>
                             <div>
-                                <button type="submit" class="button button--secondary w-full">Login</button>
+                                <button type="submit" class="button button--secondary w-full">Create Account</button>
                             </div>
                             <div class="text-center text-[12px]">
                                 by creating an account you agree to our <br>
