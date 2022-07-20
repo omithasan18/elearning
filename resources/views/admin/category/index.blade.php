@@ -64,7 +64,7 @@
                                                     <div class="col-md-9">
                                                         <div class="input-group">
                                                             <div class="custom-file">
-                                                                <input type="file" onChange="categoryImageCreate(this)" name="image" class="custom-file-input">
+                                                                <input type="file" onChange="getImage(this)" name="image" class="custom-file-input">
                                                                 <label class="custom-file-label">Choose file</label>
                                                             </div>
                                                         </div>
@@ -74,7 +74,7 @@
                                                     <label class="col-md-3 text-right"></label>
                                                     <div class="col-md-9">
                                                         <div class="input-group">
-                                                            <img width="80" height="80" src="{{ asset('demomedia/demo.jpg') }}" id="categoryimagecreate">
+                                                            <img width="80" height="80" src="{{ asset('demomedia/demo.jpg') }}" id="loadImage">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -135,10 +135,10 @@
                                                     @endif
                                                 </td>
                                                 <td>
-                                                    <button title="Edit Blog" type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit_{{$key}}">
+                                                    <button title="Edit Category" type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit_{{$key}}">
                                                         <i class="fas fa-edit"></i>
                                                     </button>
-                                                    <button title="Delete Blog" class="btn btn-danger waves-effect" type="button" onclick="deleteData({{ $category->id }})">
+                                                    <button title="Delete Category" class="btn btn-danger waves-effect" type="button" onclick="deleteData({{ $category->id }})">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                     <form id="delete-form-{{ $category->id }}" action="{{ route('admin.category.destroy', $category->id) }}" method="POST" style="display: none;">
@@ -236,11 +236,11 @@
 
 @section('script')
     <script>
-        function categoryImageCreate(input) {
+        function getImage(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 reader.onload = function(e) {
-                    $('#categoryimagecreate').attr('src', e.target.result)
+                    $('#loadImage').attr('src', e.target.result)
                 }
                 reader.readAsDataURL(input.files[0]);
             }
@@ -286,7 +286,8 @@
                     )
                 }
             })
-        }
+        };
+
         $(document).ready(function(){
             $("#valid_category_name_slug").blur( function(){
                 // alert('ok');
@@ -323,6 +324,6 @@
                 }
 
             });
-        })
+        });
     </script>
 @endsection
