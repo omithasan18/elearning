@@ -20,11 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', 'App\Http\Controllers\WelcomeController@home')->name('home');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     if (Auth::user()->role_id == 1) {
         return redirect()->route('admin.dashboard');
-    }else {
-        return redirect()->route('login');
+    }elseif(Auth::user()->role_id == 2){
+        return redirect('/');
     }
 })->name('dashboard');
 
