@@ -4,6 +4,10 @@
     <title>{{ config('app.name', 'Laravel') }} | Change Password</title>
 @endsection
 
+@section('css')
+
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

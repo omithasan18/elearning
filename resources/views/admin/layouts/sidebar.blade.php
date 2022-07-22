@@ -53,6 +53,26 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ Request::is('superadmin/lesson') || Request::is('superadmin/lesson/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-book-open"></i>
+                        <p> lesson <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.lesson.create')}}" class="nav-link {{ Request::is('superadmin/lesson/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Create lesson</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.lesson.index')}}" class="nav-link {{ Request::is('superadmin/lesson') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage lesson</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/profile') || Request::is('superadmin/change-password') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>

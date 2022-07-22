@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CourseController;
+use App\Http\Controllers\Admin\LessonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,11 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     // course
     Route::resource('course', CourseController::class);
     Route::post('valid-course-name-slug', [CourseController::class, 'checkCourse'])->name('valid_course_name_slug');
+    // lesson
+    Route::resource('lesson', LessonController::class);
+    Route::get('course-lesson-ajax/{id}', [LessonController::class, 'courseLessonCheck']);
+    Route::post('valid-lesson-name-slug', [LessonController::class, 'checkLesson'])->name('valid_lesson_name_slug');
+
 });
 
 Route::group(['as'=>'dcadmin.','prefix' => 'dcadmin', 'namespace'=>'App\Http\Controllers\DC','middleware'=>['auth','dc']], function () {

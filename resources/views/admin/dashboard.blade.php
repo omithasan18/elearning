@@ -1,5 +1,10 @@
 @extends('admin.layouts.app')
 
+
+@section('css')
+
+@endsection
+
 @section('content')
 
   <div class="content-wrapper">

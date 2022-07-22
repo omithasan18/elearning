@@ -28,8 +28,10 @@
         <link rel="stylesheet" href="{{asset('backend/plugins/summernote/summernote-bs4.css')}}">
         <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('backend/plugins/summernote/summernote-bs4.min.css')}}">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"> -->
         <link rel="stylesheet" href="{{asset('massage/toastr/toastr.css')}}">
+        @yield('css')
     </head>
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
@@ -289,6 +291,7 @@
                 });
             }
         </script>
+        <script src="{{asset('backend/plugins/summernote/summernote-bs4.min.js')}}"></script>
         <script src="{{asset('massage/toastr/toastr.js')}}"></script>
         {!! Toastr::message() !!}
         <script>
