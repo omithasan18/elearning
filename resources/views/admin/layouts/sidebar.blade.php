@@ -33,6 +33,26 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item {{ Request::is('superadmin/users') || Request::is('superadmin/users/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p> User <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.users.create')}}" class="nav-link {{ Request::is('superadmin/users/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>User Create</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.users.index')}}" class="nav-link {{ Request::is('superadmin/course') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage User</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/course') || Request::is('superadmin/course/create') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
@@ -42,7 +62,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.course.create')}}" class="nav-link {{ Request::is('superadmin/course/create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Create Course</p>
+                                <p>Course Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -62,7 +82,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.lesson.create')}}" class="nav-link {{ Request::is('superadmin/lesson/create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Create lesson</p>
+                                <p>lesson Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
