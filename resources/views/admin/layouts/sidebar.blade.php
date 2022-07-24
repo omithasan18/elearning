@@ -93,6 +93,26 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ Request::is('superadmin/page-category') || Request::is('superadmin/pages') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p> Page Management <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.page-category.index')}}" class="nav-link {{ Request::is('superadmin/page-category') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Page Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.pages.index')}}" class="nav-link {{ Request::is('superadmin/pages') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Page</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/profile') || Request::is('superadmin/change-password') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>

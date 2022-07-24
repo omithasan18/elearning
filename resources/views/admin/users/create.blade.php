@@ -54,7 +54,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="">Email Address</label>
-                                            <input type="email" class="form-control" name="email" placeholder="Password">
+                                            <input type="email" class="form-control" name="email" placeholder="Email Address">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="">Phone Number</label>
@@ -85,7 +85,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="text-right">User Address  </label>
-                                                <textarea name="" class="form-control" cols="30" rows="4" placeholder="UserAddress"></textarea>
+                                                <textarea name="address" class="form-control" cols="30" rows="4" placeholder="User Address"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -95,12 +95,15 @@
                                             <input type="password" class="form-control" name="password" placeholder="Password">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="">Confirm Password</label>
-                                            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
-                                            
+                                            <label for="">Status</label>
+                                            <select name="status" class="form-control">
+                                                <option value="" disabled> Select One</option>
+                                                <option value="1" selected>Active</option>
+                                                <option value="0">Inactive</option>
+                                            </select>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    <div class="row mt-3">
                                         <div class="col-md-12 text-right">
                                             <button type="submit" class="btn btn-success">Create User</button>
                                         </div>

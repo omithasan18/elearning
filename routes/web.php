@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\LessonController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\PageCategoryController;
+use App\Http\Controllers\Admin\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +55,9 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     Route::post('valid-lesson-name-slug', [LessonController::class, 'checkLesson'])->name('valid_lesson_name_slug');
     // users
     Route::resource('users', UserController::class);
+    // page
+    Route::resource('page-category', PageCategoryController::class);
+    Route::resource('pages', PageController::class);
 });
 
 Route::group(['as'=>'dcadmin.','prefix' => 'dcadmin', 'namespace'=>'App\Http\Controllers\DC','middleware'=>['auth','dc']], function () {
