@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DivisionTableSeeder::class);
         $this->call(DistrictTableSeeder::class);
         $this->call(ThanaTableSeeder::class);
+        $this->call(SiteSettingTableSeeder::class);
     }
 }

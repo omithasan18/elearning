@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LessonController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PageCategoryController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\SiteSettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,10 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     // page
     Route::resource('page-category', PageCategoryController::class);
     Route::resource('pages', PageController::class);
+    // site setting 
+    Route::resource('site-setting', SiteSettingController::class);
+    Route::post('get-add-row', [SiteSettingController::class, 'addRemoveRow'])->name('row.addremove');
+    
 });
 
 Route::group(['as'=>'dcadmin.','prefix' => 'dcadmin', 'namespace'=>'App\Http\Controllers\DC','middleware'=>['auth','dc']], function () {
