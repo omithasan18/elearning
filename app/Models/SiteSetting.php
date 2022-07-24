@@ -14,6 +14,7 @@ class SiteSetting extends Model
         'email',
         'logo',
         'favicon',
+        'meta_image',
         'phone',
         'meta_title',
         'keyword',

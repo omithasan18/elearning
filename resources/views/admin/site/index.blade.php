@@ -80,6 +80,23 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Meta Image</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" onChange="mainMetaImage(this)" name="meta_image" class="custom-file-input">
+                                                    <label class="custom-file-label">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Current Meta Image</label>
+                                        <div class="col-sm-8">
+                                            <img width="100" height="100" src="@if($website->meta_image) {{asset($website->meta_image)}} @else {{ asset('demomedia/demo.jpg') }}@endif" id="metaimage">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label class="col-sm-4 col-form-label">Phone Number</label>
                                         <div class="col-sm-8">
                                             <input type="number" class="form-control" name="phone" value="{{$website->phone}}">
@@ -190,6 +207,16 @@
                 var reader = new FileReader();
                 reader.onload = function(e) {
                     $('#favion').attr('src', e.target.result)
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function mainMetaImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#metaimage').attr('src', e.target.result)
                 }
                 reader.readAsDataURL(input.files[0]);
             }

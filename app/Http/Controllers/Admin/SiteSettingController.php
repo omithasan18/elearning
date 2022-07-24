@@ -141,6 +141,27 @@ class SiteSettingController extends Controller
             $website = SiteSetting::findOrFail($id);
             $fav_icon_url = $website->favicon;
         }
+
+        // for meta_image
+        $meta = $request->file('meta_image');
+        $slug_2 = 'metaimage';
+        if (isset($meta)) {
+            // make unique name for image
+            $meta_image = $slug_2.'-'.uniqid().'.'.$meta->getClientOriginalExtension();
+            $upload_path = 'media/logo/';
+            $meta_image_url = $upload_path.$meta_image;
+
+            $website = SiteSetting::findOrFail($id);
+            
+            if ($website->meta_image) {
+                unlink($website->meta_image);
+            }
+            $meta->move($upload_path, $meta_image);
+        } else {
+            $website = SiteSetting::findOrFail($id);
+            $meta_image_url = $website->meta_image;
+        }
+
         if($request->icon) {
             $icon = trim(implode('|', $request->icon), '|');
         }else {
@@ -163,6 +184,7 @@ class SiteSettingController extends Controller
             'link' => $link,
             'logo' => $logo_image_url,
             'favicon' => $fav_icon_url,
+            'meta_image' => $meta_image_url,
             'updated_at' => Carbon::now(),
         ]);
         
