@@ -93,6 +93,26 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item {{ Request::is('superadmin/question') || Request::is('superadmin/question/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-question"></i>
+                        <p>Questions <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.question.create')}}" class="nav-link {{ Request::is('superadmin/question/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Questions</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.question.index')}}" class="nav-link {{ Request::is('superadmin/question') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Questions</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/page-category') || Request::is('superadmin/pages') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>

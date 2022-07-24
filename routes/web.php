@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\PageCategoryController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SiteSettingController;
+use App\Http\Controllers\Admin\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +63,7 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     // site setting 
     Route::resource('site-setting', SiteSettingController::class);
     Route::post('get-add-row', [SiteSettingController::class, 'addRemoveRow'])->name('row.addremove');
+    Route::resource('question', QuestionController::class);
     
 });
 
