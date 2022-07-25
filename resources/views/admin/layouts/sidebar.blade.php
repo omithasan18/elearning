@@ -33,6 +33,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="{{route('admin.badges.index')}}" class="nav-link {{ Route::is('admin.badges.index') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-certificate"></i>
+                        <p>
+                            Badges
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/users') || Request::is('superadmin/users/create') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>

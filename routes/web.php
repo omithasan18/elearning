@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\PageCategoryController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\QuestionController;
+use App\Http\Controllers\Admin\BadgeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,10 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     // site setting 
     Route::resource('site-setting', SiteSettingController::class);
     Route::post('get-add-row', [SiteSettingController::class, 'addRemoveRow'])->name('row.addremove');
+    // question
     Route::resource('question', QuestionController::class);
+    // badges
+    Route::resource('badges', BadgeController::class);
     
 });
 
