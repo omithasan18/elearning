@@ -23,9 +23,7 @@ use App\Http\Controllers\Admin\QuestionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\WelcomeController@index')->name('frontend.index');
 
 Route::get('/home', 'App\Http\Controllers\WelcomeController@home')->name('home');
 

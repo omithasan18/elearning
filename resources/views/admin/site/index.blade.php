@@ -115,6 +115,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label">Copyright Text</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="copyright" class="form-control" value="{{$website->copyright}}" placeholder="Copyright Text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label class="col-sm-4 col-form-label">Description</label>
                                         <div class="col-sm-8">
                                             <textarea name="description" class="form-control" cols="30" rows="3" placeholder="Description">{{$website->description}}</textarea>

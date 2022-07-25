@@ -180,6 +180,7 @@ class SiteSettingController extends Controller
             'keyword' => $request->keyword,
             'description' => $request->description,
             'address' => $request->address,
+            'copyright' => $request->copyright,
             'icon' => $icon,
             'link' => $link,
             'logo' => $logo_image_url,

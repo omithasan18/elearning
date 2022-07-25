@@ -16,6 +16,7 @@ class SiteSetting extends Model
         'favicon',
         'meta_image',
         'phone',
+        'copyright',
         'meta_title',
         'keyword',
         'description',

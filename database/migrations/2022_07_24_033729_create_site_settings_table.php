@@ -21,6 +21,7 @@ class CreateSiteSettingsTable extends Migration
             $table->string('favicon')->nullable();
             $table->string('meta_image')->nullable();
             $table->string('phone')->nullable();
+            $table->string('copyright')->nullable();
             $table->string('meta_title')->nullable();
             $table->string('keyword')->nullable();
             $table->string('description')->nullable();
