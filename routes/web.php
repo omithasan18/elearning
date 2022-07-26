@@ -12,6 +12,9 @@ use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\BadgeController;
+use App\Http\Controllers\Admin\GlossaryController;
+
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +40,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
         return redirect('/');
     }
 })->name('dashboard');
+
+Route::get('course', [HomeController::class, 'course'])->name('course');
+Route::get('course-details', [HomeController::class, 'courseDetails'])->name('course.details');
+Route::get('lesson-details', [HomeController::class, 'lessonDetails'])->name('lesson.details');
 
 Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','admin']], function () {
 
@@ -68,6 +75,7 @@ Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','ad
     Route::resource('question', QuestionController::class);
     // badges
     Route::resource('badges', BadgeController::class);
+    Route::resource('glossary', GlossaryController::class);
     
 });
 

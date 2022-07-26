@@ -50,10 +50,9 @@
                                             <th>SL No</th>
                                             <th>Name</th>
                                             <th>Image</th>
-                                            <th>Description</th>
-                                            <th>Lession Count</th>
-                                            <th>users For</th>
-                                            <th>users Time</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -61,6 +60,19 @@
                                         @foreach($users as $key => $user)
                                             <tr>
                                                 <td>{{$key + 1}}</td>
+                                                <td>{{$user->name}}</td>
+                                                <td>
+                                                    <img width="80" height="80" src="{{asset($user->image)}}" alt="{{$user->name}}">
+                                                </td>
+                                                <td>{{$user->email}}</td>
+                                                <td>{{$user->address}}</td>
+                                                <td>
+                                                    @if($user->status == 1)
+                                                        <span class="badge bg-success">Active</span>
+                                                    @else 
+                                                        <span class="badge bg-success">Inactive</span>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <a title="Edit user" href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning">
                                                         <i class="fas fa-edit"></i>

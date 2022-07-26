@@ -11,6 +11,11 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{ route('frontend.index') }}" target="__blank" class="nav-link">
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </li>
     </ul>
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">

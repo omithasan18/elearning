@@ -21,7 +21,7 @@
         <div>
             <h3 class="font-bold mb-4 text-gray-700">Helpful Links</h3>
             <ul class="space-y-2">
-                <li><a href="#">Courses</a></li>
+                <li><a href="{{route('course')}}">Courses</a></li>
                 <li><a href="#">Quizzes</a></li>
                 <li><a href="#">Glossary</a></li>
                 <li><a href="#">Exchange</a></li>
@@ -37,4 +37,4 @@
         </div>
     </div>
 </div>
-<div class="copyright border-t py-4 mt-5 text-center px-5"> © 2022 {{$website->copyright ?? ''}}. All rights reserved.</div>
+<div class="copyright border-t py-4 mt-5 text-center px-5">© 2022 {{ $website->copyright }}. All rights reserved.</div>
