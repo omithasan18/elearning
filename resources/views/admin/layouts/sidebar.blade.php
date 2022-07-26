@@ -33,6 +33,34 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="{{route('admin.badges.index')}}" class="nav-link {{ Route::is('admin.badges.index') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-certificate"></i>
+                        <p>
+                            Badges
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item {{ Request::is('superadmin/users') || Request::is('superadmin/users/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p> User <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.users.create')}}" class="nav-link {{ Request::is('superadmin/users/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>User Create</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.users.index')}}" class="nav-link {{ Request::is('superadmin/course') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage User</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item {{ Request::is('superadmin/course') || Request::is('superadmin/course/create') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-book"></i>
@@ -42,7 +70,7 @@
                         <li class="nav-item">
                             <a href="{{route('admin.course.create')}}" class="nav-link {{ Request::is('superadmin/course/create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Create Course</p>
+                                <p>Course Create</p>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -53,12 +81,78 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ Request::is('superadmin/profile') || Request::is('superadmin/change-password') ? 'menu-open' : '' }}">
+                <li class="nav-item {{ Request::is('superadmin/lesson') || Request::is('superadmin/lesson/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-book-open"></i>
+                        <p> lesson <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.lesson.create')}}" class="nav-link {{ Request::is('superadmin/lesson/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>lesson Create</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.lesson.index')}}" class="nav-link {{ Request::is('superadmin/lesson') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage lesson</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ Request::is('superadmin/question') || Request::is('superadmin/question/create') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-question"></i>
+                        <p>Questions <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.question.create')}}" class="nav-link {{ Request::is('superadmin/question/create') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Questions</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.question.index')}}" class="nav-link {{ Request::is('superadmin/question') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Questions</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ Request::is('superadmin/page-category') || Request::is('superadmin/pages') ? 'menu-open' : '' }}">
+                    <a href="javascript:;" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p> Page Management <i class="fas fa-angle-left right"></i> </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.page-category.index')}}" class="nav-link {{ Request::is('superadmin/page-category') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Page Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('admin.pages.index')}}" class="nav-link {{ Request::is('superadmin/pages') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Manage Page</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item {{ Request::is('superadmin/profile') || Request::is('superadmin/change-password') || Request::is('superadmin/site-setting') ? 'menu-open' : '' }}">
                     <a href="javascript:;" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p> Settings <i class="fas fa-angle-left right"></i> </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('admin.site-setting.index')}}" class="nav-link {{ Request::is('superadmin/site-setting') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Site Setting</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{route('admin.profile')}}" class="nav-link {{ Request::is('superadmin/profile') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>

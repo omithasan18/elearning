@@ -25,5 +25,10 @@ class WelcomeController extends Controller
         $customer->password = bcrypt($request->password);
         $customer->save();
         return redirect('/login')->with('msg','Register Successfully ! Please Login Here');
+    //
+    }
+    public function index()
+    {
+        return view('welcome',);
     }
 }

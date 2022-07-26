@@ -2,6 +2,11 @@
 @section('title')
     <title>{{ config('app.name', 'Laravel') }} | Profile</title>
 @endsection
+
+@section('css')
+
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
