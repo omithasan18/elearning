@@ -48,6 +48,8 @@ Route::get('lesson-details', [HomeController::class, 'lessonDetails'])->name('le
 Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','admin']], function () {
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('home-page-settings', [DashboardController::class, 'homePageSetting'])->name('homepage.setting');
+    Route::post('home-page-settings-update/{id}', [DashboardController::class, 'homePageSettingUpdate'])->name('homepagesetting.update');
     //profile
     Route::get('profile', [SettingController::class, 'profile'])->name('profile');
     Route::post('update-profile', [SettingController::class, 'update_profile'])->name('update-profile');

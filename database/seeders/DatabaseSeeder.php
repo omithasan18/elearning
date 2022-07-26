@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DistrictTableSeeder::class);
         $this->call(ThanaTableSeeder::class);
         $this->call(SiteSettingTableSeeder::class);
+        $this->call(HomePageSeederTable::class);
     }
 }

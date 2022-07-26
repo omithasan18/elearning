@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\HomePage;
 
 class WelcomeController extends Controller
 {
+    public function index()
+    {
+        $welcomesection = HomePage::where('id', 1)->first();
+        $youtubesection = HomePage::where('id', 2)->first();
+        return view('welcome', compact('welcomesection', 'youtubesection'));
+    }
+
     public function register(){
         return view('auth.register');
     }
@@ -26,9 +34,5 @@ class WelcomeController extends Controller
         $customer->save();
         return redirect('/login')->with('msg','Register Successfully ! Please Login Here');
     //
-    }
-    public function index()
-    {
-        return view('welcome');
     }
 }
