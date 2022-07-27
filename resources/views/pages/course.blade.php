@@ -26,25 +26,13 @@
 <section class="section-padding-b">
     <div class="container">
         <div class="grid gap-8 grid-cols-1 md:grid-cols-12 mb-10">
-            <div class="md:col-span-8">
-                <h3 class="text-xl mb-4">Categories</h3>
-                <div class="flex gap-2 flex-wrap">
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Altcoins</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Bitcoin</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Blockchain</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Cryptocurrency</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">DefiEthereum</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Metaverse and Gaming</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">NFTSecurity</a>
-                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap hover:bg-blue-500 hover:text-white hover:border-transparent">Trading and Analysis</a>
-                </div>
-            </div>
             <div class="md:col-span-4">
                 <h3 class="text-xl mb-4">Difficulty</h3>
                 <div class="flex gap-2 flex-wrap">
                     <a href="#" class="button button--tertiary text-sm whitespace-nowrap border-green-500 hover:bg-green-500 hover:text-white hover:border-transparent">Beginner</a>
                     <a href="#" class="button button--tertiary text-sm whitespace-nowrap border-yellow-500 hover:bg-yellow-500 hover:text-white hover:border-transparent">Intermediate</a>
                     <a href="#" class="button button--tertiary text-sm whitespace-nowrap border-red-500 hover:bg-red-500 hover:text-white hover:border-transparent">Advanced</a>
+                    <a href="#" class="button button--tertiary text-sm whitespace-nowrap border-red-500 hover:bg-red-500 hover:text-white hover:border-transparent">Offer</a>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontEnd/dist/img/')}}/favi.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/')}}/favi.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- fonts (Poppins) -->
@@ -17,18 +17,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- ALL CSS -->
-    <link rel="stylesheet" href="{{asset('frontEnd/dist/css/')}}/slick.css">
-    <link rel="stylesheet" href="{{asset('frontEnd/dist/css/')}}/slick-theme.css">
-    <link rel="stylesheet" href="{{asset('frontEnd/dist/css/')}}/all.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/')}}/slick.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/')}}/slick-theme.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/')}}/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <link rel="stylesheet" href="{{asset('frontEnd/dist/css/')}}/tailwind.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/')}}/tailwind.css">
 </head>
 
 <body>
 
     <!-- <div class="go-to-top"><i class="icofont-rounded-up"></i></div> -->
     <!-- go to top button -->
-    <div class="preloader"><img src="{{asset('frontEnd/dist/img/')}}/loading.gif" alt=""></div>
+    <div class="preloader"><img src="{{asset('frontend/img/')}}/loading.gif" alt=""></div>
     <!-- end of preloader -->
 
     <header class="h-auto">
@@ -36,7 +36,7 @@
             <div class="container mx-auto !max-w-[80%]">
                 <div class="flex justify-between items-center">
                     <div>
-                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/dist/img/')}}/logo.png" alt="" class="navbar__logo max-h-[40px]"></a>
+                        <a href="{{url('/')}}"><img src="{{asset('frontend/img/')}}/logo.png" alt="" class="navbar__logo max-h-[40px]"></a>
                     </div>
 
                     <div class="flex space-x-2">
@@ -65,21 +65,21 @@
                         <div class="carousel-inner relative w-full overflow-hidden">
                             <div class="carousel-item active relative float-left w-full">
                                 <div class="w-[calc(100%-120px)] mx-auto">
-                                    <img src="{{asset('frontEnd/dist/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
+                                    <img src="{{asset('frontend/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
                                     <h4 class="text-2xl text-white font-bold mb-3">Instant AUD deposits</h4>
                                     <p class="line-clamp-3">Deposit and Withdraw AUD via PayID, OSKO Bank Transfers & POLi Deposit and Withdraw AUD via PayID, OSKO Bank Transfers & POLiDeposit and Withdraw AUD via PayID, OSKO Bank Transfers & POLi</p>
                                 </div>
                             </div>
                             <div class="carousel-item relative float-left w-full">
                                 <div class="w-[calc(100%-120px)] mx-auto">
-                                    <img src="{{asset('frontEnd/dist/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
+                                    <img src="{{asset('frontend/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
                                     <h4 class="text-2xl text-white font-bold mb-3">Instant AUD deposits</h4>
                                     <p class="line-clamp-3">Deposit and Withdraw AUD via PayID, OSKO Bank Transfers & POLi</p>
                                 </div>
                             </div>
                             <div class="carousel-item relative float-left w-full">
                                 <div class="w-[calc(100%-120px)] mx-auto">
-                                    <img src="{{asset('frontEnd/dist/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
+                                    <img src="{{asset('frontend/img/')}}/bundles.webp" alt="" class="mx-auto w-full max-w-[450px] mb-3">
                                     <h4 class="text-2xl text-white font-bold mb-3">Instant AUD deposits</h4>
                                     <p class="line-clamp-3">Deposit and Withdraw AUD via PayID, OSKO Bank Transfers & POLi</p>
                                 </div>
@@ -152,12 +152,12 @@
 
 
     <!-- ALL JS -->
-    <script src="{{asset('frontEnd/dist/js/')}}/jquery-3.5.1.min.js"></script>
-    <script src="{{asset('frontEnd/dist/js/')}}/slick.min.js"></script>
+    <script src="{{asset('frontend/js/')}}/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('frontend/js/')}}/slick.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{asset('frontEnd/dist/js/')}}/jquery.countdown.min.js"></script>
+    <script src="{{asset('frontend/js/')}}/jquery.countdown.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <script src="{{asset('frontEnd/dist/js/')}}/main.js"></script>
+    <script src="{{asset('frontend/js/')}}/main.js"></script>
 </body>
 
 </html>

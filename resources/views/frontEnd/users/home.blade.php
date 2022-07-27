@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontEnd/user/dist/img/')}}/favi.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/user/dist/img/')}}/favi.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- fonts (Poppins) -->
@@ -20,29 +20,29 @@
     <!-- ALL CSS -->
     <!-- <link rel="stylesheet" href="dist/css/slick.css">
     <link rel="stylesheet" href="dist/css/slick-theme.css"> -->
-    <link rel="stylesheet" href="{{asset('frontEnd/user/dist/css/')}}/all.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/user/dist/css/')}}/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <link rel="stylesheet" href="{{asset('frontEnd/user/dist/css/')}}/tailwind.css">
+    <link rel="stylesheet" href="{{asset('frontend/user/dist/css/')}}/tailwind.css">
 </head>
 
 <body>
 
     <!-- <div class="go-to-top"><i class="icofont-rounded-up"></i></div> -->
     <!-- go to top button -->
-    <div class="preloader"><img src="{{asset('frontEnd/user/dist/img/')}}/loading.gif" alt=""></div>
+    <div class="preloader"><img src="{{asset('frontend/user/dist/img/')}}/loading.gif" alt=""></div>
     <!-- end of preloader -->
 
     <header class="bg-white py-2 mb-8">
         <div class="container flex items-center justify-between">
             <div class="flex items-center">
                 <a href="{{url('/')}}" class="from-emerald-500 via-emerald-600 to-emerald-500 px-5 py-2" style="width: 135px">
-                    <img src="{{asset('frontEnd/user/dist/img/')}}/logo.png" alt="">
+                    <img src="{{asset('frontend/user/dist/img/')}}/logo.png" alt="">
                 </a>
                 <a href="#" class="ml-5">Learn</a>
             </div>
 
             <div>
-                <img src="{{asset('frontEnd/user/dist/img/')}}/profile-small.png" alt="" class="rounded-lg max-w-[50px]">
+                <img src="{{asset('frontend/user/dist/img/')}}/profile-small.png" alt="" class="rounded-lg max-w-[50px]">
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-gray-600 font-bold mb-2 md:mb-4">Logout</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
@@ -56,7 +56,7 @@
             <div class="bg-white rounded-xl p-5 md:p-10 pb-2">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-3 mb-5">
                     <div class="relative md:col-span-2">
-                        <img src="{{asset('frontEnd/user/dist/img/')}}/profile-large.png" alt="" class="rounded-lg md:max-w-[300px] w-full">
+                        <img src="{{asset('frontend/user/dist/img/')}}/profile-large.png" alt="" class="rounded-lg md:max-w-[300px] w-full">
                         <span class="absolute bottom-1/4 -right-[10px] w-5 h-5 rounded-full bg-emerald-500 border-[4px] border-white"></span>
                     </div>
                     <div class="md:col-span-10">
@@ -67,11 +67,11 @@
                         <div class="flex gap-5 lg:items-center justify-between flex-col lg:flex-row">
                             <div class="grid grid-cols-2 gap-4 max-w-[330px]">
                                 <div class="border rounded-lg p-4">
-                                    <h5 class="text-2xl w-full flex items-center">150 <img src="{{asset('frontEnd/user/dist/img/')}}/icons/gold-coin.png" alt="" class="w-5 ml-2 inline-block"></h5>
+                                    <h5 class="text-2xl w-full flex items-center">150 <img src="{{asset('frontend/user/dist/img/')}}/icons/gold-coin.png" alt="" class="w-5 ml-2 inline-block"></h5>
                                     <div class="text-gray-500">Points Earned</div>
                                 </div>
                                 <div class="border rounded-lg p-4">
-                                    <h5 class="text-2xl w-full flex items-center">75 <img src="{{asset('frontEnd/user/dist/img/')}}/icons/pie-chart-1.png" alt="" class="w-5 ml-2 inline-block"></h5>
+                                    <h5 class="text-2xl w-full flex items-center">75 <img src="{{asset('frontend/user/dist/img/')}}/icons/pie-chart-1.png" alt="" class="w-5 ml-2 inline-block"></h5>
                                     <div class="text-gray-500">Reward</div>
                                 </div>
                             </div>
@@ -105,21 +105,21 @@
                                 <a href="#" class="text-emerald-500">View All</a>
                             </div>
                             <div class="grid grid-cols-3 gap-10">
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
-                                <div><img src="{{asset('frontEnd/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/award.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge-1.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/badge.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/college.png" alt="" class="max-w-[60px] mx-auto"></div>
+                                <div><img src="{{asset('frontend/user/dist/img/')}}/icons/badge/police-badge.png" alt="" class="max-w-[60px] mx-auto"></div>
                             </div>
                         </div>
 
@@ -135,7 +135,7 @@
                             <div class="table-responsive">
                                 <table class="table w-full tr-space-4 min-w-[500px]">
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/handshake.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/handshake.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -156,7 +156,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/fire.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/fire.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -177,7 +177,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/ethereum.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/ethereum.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -198,7 +198,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/nft.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/nft.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -230,7 +230,7 @@
                             <div class="table-responsive">
                                 <table class="table w-full tr-space-4 min-w-[250px]">
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/handshake.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/handshake.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -240,7 +240,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/fire.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/fire.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -250,7 +250,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="w-[70px]"><img src="{{asset('frontEnd/user/dist/img/')}}/icons/ethereum.png" alt="" class="max-w-[60px]"></td>
+                                        <td class="w-[70px]"><img src="{{asset('frontend/user/dist/img/')}}/icons/ethereum.png" alt="" class="max-w-[60px]"></td>
                                         <td>
                                             <h4 class="text-lg font-bold">Stacking</h4>
                                             <div class="text-gray-500">Amet Consectetur</div>
@@ -291,12 +291,12 @@
 
 
     <!-- ALL JS -->
-    <script src="{{asset('frontEnd/user/dist/js/')}}/jquery-3.5.1.min.js"></script>
+    <script src="{{asset('frontend/user/dist/js/')}}/jquery-3.5.1.min.js"></script>
     <!-- <script src="dist/js/slick.min.js"></script> -->
     <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <!-- <script src="dist/js/jquery.countdown.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <script src="{{asset('frontEnd/user/dist/js/')}}/main.js"></script>
+    <script src="{{asset('frontend/user/dist/js/')}}/main.js"></script>
 </body>
 
 </html>

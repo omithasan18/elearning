@@ -10,10 +10,10 @@
                 </a>
             </div>
             <ul class="navbar__list hidden md:flex">
-                <li class="navbar__item"><a href="{{route('frontend.index')}}" class="navbar__link">Categories</a></li>
                 <li class="navbar__item"><a href="{{route('course')}}" class="navbar__link">Courses</a></li>
-                <li class="navbar__item"><a href="forum.html" class="navbar__link">Quizzes</a></li>
-                <li class="navbar__item"><a href="contact.html" class="navbar__link">Exchange</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Pricing</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Simulator</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">About Us</a></li>
                 <li class="navbar__item"><button class="button search-box-toggler"><i class="far fa-search"></i></button></li>
             </ul>
             <form class="search-box">
@@ -23,7 +23,7 @@
             <div class="flex space-x-2">
                 <button class="button button--icon open-mobile-menu md:hidden"><i class="far fa-bars"></i></button>
                 @auth
-                    <a href="login.html" class="button button--tertiary hidden xl:inline-block">Profile</a>
+                    <a href="{{route('home')}}" class="button button--tertiary hidden xl:inline-block">Chalqboard</a>
                     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="button button--primary hidden md:inline-block">
                         Logout
                     </a>
@@ -32,7 +32,7 @@
                     </form>
                 @else
                     <a href="{{url('login')}}" class="button button--tertiary hidden xl:inline-block">Login</a>
-                    <a href="login.html" class="button button--primary hidden md:inline-block">Signup</a>
+                    <a href="{{url('register')}}" class="button button--primary hidden md:inline-block">Signup</a>
                 @endauth
             </div>
         </div>

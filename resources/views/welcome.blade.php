@@ -35,6 +35,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-[50px] md:gap-[100px] items-center">
                     <div>
                         <h4 class="text-xl text-blue-700 font-bold">Welcome to</h4>
+                        <h4 class="text-4xl text-gray-600 font-bold mb-5 mt-2">Blockchain Education. Simplified.</h4>
                         <h1 class="text-5xl text-gray-600 font-bold mb-5 mt-2">Chalq Learning</h1>
                         <p class="text-xl leading-[1.5]">
                             Grounded in neuroscience and proven modern learning methodologies, Chalq is a Blockchain EdTech
@@ -53,6 +54,7 @@
         @else
             <div class="grid grid-cols-1 md:grid-cols-2 gap-[50px] md:gap-[100px] items-center">
                 <div>
+                    <h1 class="text-5xl text-gray-600 font-bold mb-5 mt-2">Chalq Learning</h1>
                     <h4 class="text-xl text-blue-700 font-bold">Welcome to</h4>
                     <h1 class="text-5xl text-gray-600 font-bold mb-5 mt-2">Chalq Learning</h1>
                     <p class="text-xl leading-[1.5]">
@@ -71,7 +73,21 @@
         @endif
     </div>
 </section>
+<section class="section-padding bg-gray-100">
+    <div class="container">
+        <h3 class="text-xl text-center uppercase tracking-wider mb-10">AS FEATURED IN</h3>
 
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 max-w-[680px] mx-auto">
+            <img src="{{asset('frontend/img/sponsors/1.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/2.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/3.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/4.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/5.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/6.png')}}" alt="" class="max-h-6 sm:max-h-8">
+            <img src="{{asset('frontend/img/sponsors/7.png')}}" alt="" class="max-h-6 sm:max-h-8">
+        </div>
+    </div>
+</section>
 <section class="section-padding-b">
     <div class="container">
         @if($youtubesection)
