@@ -88,26 +88,20 @@
         </div>
     </div>
 </section>
-<section class="section-padding-b">
+<section class="section-padding">
     <div class="container">
-        @if($youtubesection)
-            @if($youtubesection->status == 1)
-                <h2 class="section-heading">{{$youtubesection->name}}</h2>
-                <div>
-                    <iframe class="w-full max-w-[800px] mx-auto aspect-[3/1.8]" src="{{$youtubesection->youtube_link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            @else
-                <h2 class="section-heading">Blockchain and Cryptocurrency Education</h2>
-                <div>
-                    <iframe class="w-full max-w-[800px] mx-auto aspect-[3/1.8]" src="https://www.youtube.com/embed/CQ7XUCQ6pbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            @endif
-        @else
-            <h2 class="section-heading">Blockchain and Cryptocurrency Education</h2>
+        <h3 class="section-heading">What is Blockchain Technology?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[50px] md:gap-[100px] items-center">
             <div>
+                Expert created and taught
+                <br/>✔️ (Our team of Blockchain Experts and Web3 Advisors spent hundreds of hours creating Chalq just for you!) Proven, structured process <br>✔️ (All of our Microlearning course videos are backed by decades of research, neuroscience
+                and proven modern learning methodologies) Highly structured and sequential</br> ✔️ (All of our videos are short, digestible and touch on all learning modalities) Unlimited customer support from our Co-Founders<br/>✔️ (If you ever
+                need anything, don’t be a stranger and email one of our Co-Founders with any questions, concerns or complaints you make have) </div>
+            <div>
+
                 <iframe class="w-full max-w-[800px] mx-auto aspect-[3/1.8]" src="https://www.youtube.com/embed/CQ7XUCQ6pbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        @endif
+        </div>
     </div>
 </section>
 @endsection
