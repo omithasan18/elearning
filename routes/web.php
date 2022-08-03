@@ -43,6 +43,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('course', [HomeController::class, 'course'])->name('course');
 Route::get('course-details', [HomeController::class, 'courseDetails'])->name('course.details');
+Route::get('about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('lesson-details', [HomeController::class, 'lessonDetails'])->name('lesson.details');
 
 Route::group(['as'=>'admin.','prefix' => 'superadmin', 'middleware'=>['auth','admin']], function () {

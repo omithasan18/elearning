@@ -28,4 +28,7 @@ class HomeController extends Controller
         $courses = Course::latest()->paginate(6);
         return view('pages.lessondetails', compact('courses'));
     }
+    public function aboutUs(){
+        return view('pages.about_us');
+    }
 }

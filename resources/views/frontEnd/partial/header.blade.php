@@ -13,7 +13,7 @@
                 <li class="navbar__item"><a href="{{route('course')}}" class="navbar__link">Courses</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">Pricing</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">Simulator</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">About Us</a></li>
+                <li class="navbar__item"><a href="{{route('about-us')}}" class="navbar__link">About Us</a></li>
                 <li class="navbar__item"><button class="button search-box-toggler"><i class="far fa-search"></i></button></li>
             </ul>
             <form class="search-box">
