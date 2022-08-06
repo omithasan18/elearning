@@ -109,5 +109,9 @@ class GlossaryController extends Controller
     public function destroy($id)
     {
         //
+        $golosary = Glossary::findOrFail($id);
+        $golosary->delete();
+        Toastr::warning('Glossary Successfully delete :-)','info');
+        return redirect()->back();
     }
 }

@@ -62,7 +62,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.users.index')}}" class="nav-link {{ Request::is('superadmin/course') ? 'active' : '' }}">
+                            <a href="{{route('admin.users.index')}}" class="nav-link {{ Request::is('superadmin/users') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Manage User</p>
                             </a>

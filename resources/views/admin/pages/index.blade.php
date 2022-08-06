@@ -123,9 +123,9 @@
                                     <thead>                  
                                         <tr>
                                             <th>SL No</th>
+                                            <th>Page Category Name</th>
                                             <th>Name</th>
                                             <th>Image</th>
-                                            <th>Status</th>
                                             <th>Description</th>
                                             <th>Action</th>
                                         </tr>
